@@ -5,6 +5,7 @@ gem 'sqlite3'
 # gem 'strong_parameters', '0.2.0' # Should be availble in rails 4
 gem 'monban'
 gem 'monban-generators'
+gem 'turbolinks'
 
 group :assests do
   gem 'sass-rails', '~> 5.0'
@@ -13,3 +14,12 @@ group :assests do
 end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+end
