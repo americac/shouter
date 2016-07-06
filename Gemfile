@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'monban'
 gem 'monban-generators'
 gem 'turbolinks'
+gem 'paperclip', '3.4.0'
 
 group :assests do
   gem 'sass-rails', '~> 5.0'
