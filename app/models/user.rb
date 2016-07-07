@@ -5,11 +5,23 @@ class User < ActiveRecord::Base
 
   has_many :followed_user_relationships,
     foreign_key: :follower_id,
-    class_name: 'FollowingRelationships'
+    class_name: 'FollowingRelationship'
   has_many :followed_users, through: :followed_user_relationships
 
   has_many :follower_relationships,
     foreign_key: :followed_user_id,
-    class_name: 'FollowingRelationships'
+    class_name: 'FollowingRelationship'
   has_many :followers, through: :following_relationships
+
+  def following? user
+    followed_user_ids.include? user.id
+  end
+
+  def follow user
+    followed_users << user
+  end
+
+  def unfollow user
+    followed_users.delete(user)
+  end
 end
