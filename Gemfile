@@ -8,6 +8,10 @@ gem 'monban-generators'
 gem 'turbolinks'
 gem 'paperclip', '3.4.0'
 
+# These did not work
+#gem 'sunspot_rails'
+#gem 'sunspot_solr'
+
 group :assests do
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '>= 1.3.0'
